@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ddik5iyvpdulk"]
+
+[ext_resource type="PackedScene" uid="uid://bpfp0l3icao71" path="res://01_HoudiniExports/cloth_test/cloth_test.gltf" id="1_j2i5k"]
+[ext_resource type="Material" uid="uid://d1uw71pa4n2cl" path="res://02_VATGodot/clothVatTest/Du_softBodyTestMat.tres" id="2_75in1"]
+
+[node name="cloth_test" unique_id=1830393410 instance=ExtResource("1_j2i5k")]
+
+[node name="Mesh" parent="." index="0" unique_id=687253240]
+material_override = ExtResource("2_75in1")

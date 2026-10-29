@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://d1uw71pa4n2cl"]
+
+[ext_resource type="Shader" uid="uid://dqtjnus8tyxlm" path="res://02_VATGodot/clothVatTest/softBodyTest.gdshader" id="1_fscsh"]
+[ext_resource type="Texture2D" uid="uid://decqcf3jiik2l" path="res://01_HoudiniExports/cloth_test/cloth_test_pos.exr" id="2_ubpof"]
+[ext_resource type="Texture2D" uid="uid://b42asfsu62kyj" path="res://01_HoudiniExports/cloth_test/cloth_test_rot.exr" id="3_3ibap"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fscsh")
+shader_parameter/_isTexHdr = true
+shader_parameter/_boundMax = Vector3(0, 0, 0)
+shader_parameter/_boundMin = Vector3(0, 0, 0)
+shader_parameter/_houdiniFPS = 0.0
+shader_parameter/_frameCount = 90.0
+shader_parameter/_surfaceNormals = false
+shader_parameter/_interpolate = false
+shader_parameter/_gameTimeAtFirstFrame = 0.0
+shader_parameter/_playbackSpeed = 1.0
+shader_parameter/_displayFrame = 0.0
+shader_parameter/_autoPlayback = false
+shader_parameter/vatPosTex = ExtResource("2_ubpof")
+shader_parameter/vatRotTex = ExtResource("3_3ibap")

@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://3j5jhme8wnn"]
+
+[ext_resource type="Shader" uid="uid://dqtjnus8tyxlm" path="res://02_VATGodot/clothVatTest/softBodyTest.gdshader" id="1_6am62"]
+[ext_resource type="Texture2D" uid="uid://ccmh1psiaa1h6" path="res://02_VATGodot/clothVatTest/softBodyTestNormalMap.png" id="2_j8vd5"]
+[ext_resource type="Texture2D" uid="uid://02tlb8g4aume" path="res://02_VATGodot/clothVatTest/tex/Cloth_simumlation_pos.exr" id="2_layep"]
+[ext_resource type="Texture2D" uid="uid://cc8v83bjpplvi" path="res://02_VATGodot/clothVatTest/tex/Cloth_simumlation_rot.exr" id="3_7j8lo"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6am62")
+shader_parameter/_isTexHdr = true
+shader_parameter/_boundMax = Vector3(8, -3.2, 5.05)
+shader_parameter/_boundMin = Vector3(-8, -14.106, -5)
+shader_parameter/_houdiniFPS = 24.0
+shader_parameter/_frameCount = 100.0
+shader_parameter/_surfaceNormals = true
+shader_parameter/_interpolate = true
+shader_parameter/_gameTimeAtFirstFrame = 0.0
+shader_parameter/_playbackSpeed = 1.0
+shader_parameter/_displayFrame = 1.0
+shader_parameter/_autoPlayback = true
+shader_parameter/normalmap = ExtResource("2_j8vd5")
+shader_parameter/vatPosTex = ExtResource("2_layep")
+shader_parameter/vatRotTex = ExtResource("3_7j8lo")

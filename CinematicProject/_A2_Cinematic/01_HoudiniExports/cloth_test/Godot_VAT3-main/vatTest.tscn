@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bcdi16oic7e5t"]
+
+[ext_resource type="PackedScene" uid="uid://dhdgtg3oqv5dd" path="res://rigidVatTest/geo/rigid_body_simulation_mesh_100F.gltf" id="2_0alca"]
+[ext_resource type="Material" uid="uid://xha7o7u1vl2h" path="res://rigidVatTest/rigidBodyTestMat.tres" id="2_2jf81"]
+[ext_resource type="Material" uid="uid://dao6jbdg5yog" path="res://dynamicMeshTest/dynamicMeshTestMat.tres" id="4_t4ohf"]
+[ext_resource type="PackedScene" uid="uid://dpyfq0d4apmfb" path="res://dynamicMeshTest/geo/fluidSimulation_mesh_100F.gltf" id="6_panr7"]
+[ext_resource type="Material" uid="uid://coxi0nbsn5s2f" path="res://particleVatTest/particlesTestMat.tres" id="6_xolcm"]
+[ext_resource type="Material" uid="uid://3j5jhme8wnn" path="res://clothVatTest/softBodyTestMat.tres" id="8_h1vhy"]
+[ext_resource type="PackedScene" uid="uid://wdep7rupvocc" path="res://clothVatTest/geo/Cloth_simumlation_mesh_100F.gltf" id="8_hcw6b"]
+[ext_resource type="PackedScene" uid="uid://ciobim5ryayjk" path="res://particleVatTest/geo/particles_simulation_mesh_100F.gltf" id="10_erqmm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4h4pj"]
+
+[sub_resource type="Sky" id="Sky_dbotb"]
+sky_material = SubResource("ProceduralSkyMaterial_4h4pj")
+
+[sub_resource type="Environment" id="Environment_4e70v"]
+background_mode = 2
+sky = SubResource("Sky_dbotb")
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_wv6dd"]
+
+[node name="Node3D" type="Node3D" unique_id=1563913006]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=629080696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.21053)
+top_level = true
+environment = SubResource("Environment_4e70v")
+attributes = SubResource("CameraAttributesPhysical_wv6dd")
+current = true
+fov = 37.849285
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=884273107]
+transform = Transform3D(1, 0, 0, 0, 0.827591, 0.561332, 0, -0.561332, 0.827591, 11.2536, 10.1913, -44.9549)
+shadow_enabled = true
+
+[node name="rigid_body_simulation_mesh_100F" parent="." unique_id=680925810 instance=ExtResource("2_0alca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.578018, -2.38419e-07, -84.7305)
+
+[node name="Mesh" parent="rigid_body_simulation_mesh_100F" index="0" unique_id=1313205163]
+material_override = ExtResource("2_2jf81")
+
+[node name="fluidSimulation_mesh_100F" parent="." unique_id=1367674802 instance=ExtResource("6_panr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7257, 0, -85.4753)
+
+[node name="Mesh" parent="fluidSimulation_mesh_100F" index="0" unique_id=448671043]
+material_override = ExtResource("4_t4ohf")
+
+[node name="particles_simulation_mesh_100F" parent="." unique_id=1460151935 instance=ExtResource("10_erqmm")]
+transform = Transform3D(-0.987884, 0.155193, 0, -0.0524933, -0.334147, 0.941058, 0.146046, 0.929656, 0.338245, 14.4815, 0, -90.0996)
+
+[node name="Mesh" parent="particles_simulation_mesh_100F" index="0" unique_id=1903868285]
+material_override = ExtResource("6_xolcm")
+
+[node name="Cloth_simumlation_mesh_100F" parent="." unique_id=1182427075 instance=ExtResource("8_hcw6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3958, 0, -39.8637)
+
+[node name="Mesh" parent="Cloth_simumlation_mesh_100F" index="0" unique_id=1274971207]
+material_override = ExtResource("8_h1vhy")
+
+[editable path="rigid_body_simulation_mesh_100F"]
+[editable path="fluidSimulation_mesh_100F"]
+[editable path="particles_simulation_mesh_100F"]
+[editable path="Cloth_simumlation_mesh_100F"]

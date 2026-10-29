@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://xha7o7u1vl2h"]
+
+[ext_resource type="Shader" path="res://rigidVatTest/rigidBodyTest.gdshader" id="1_cc1fp"]
+[ext_resource type="Texture2D" uid="uid://boe5dfhws1src" path="res://rigidVatTest/tex/rigid_body_simulation_pos.exr" id="2_mhkl3"]
+[ext_resource type="Texture2D" uid="uid://qfe3v8h0nk0r" path="res://rigidVatTest/tex/rigid_body_simulation_col.exr" id="2_qoj2q"]
+[ext_resource type="Texture2D" uid="uid://cvaqjcwatsg4h" path="res://rigidVatTest/tex/rigid_body_simulation_rot.exr" id="3_mj5mv"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_cc1fp")
+shader_parameter/_isTexHdr = true
+shader_parameter/_boundMax = Vector3(3, 2.5, 9.25)
+shader_parameter/_boundMin = Vector3(-2.7, -0.301, -3.3)
+shader_parameter/_houdiniFPS = 24.0
+shader_parameter/_stretchByVel = false
+shader_parameter/_stretchByVelAmount = 0.05
+shader_parameter/_animateFirstFrame = false
+shader_parameter/_pscaleAreInPosA = false
+shader_parameter/_globalPscaleMul = 1.0
+shader_parameter/_frameCount = 100.0
+shader_parameter/_surfaceNormals = true
+shader_parameter/_interpolate = true
+shader_parameter/_gameTimeAtFirstFrame = null
+shader_parameter/_playbackSpeed = 1.0
+shader_parameter/_displayFrame = 2.0
+shader_parameter/_autoPlayback = true
+shader_parameter/vatColTex = ExtResource("2_qoj2q")
+shader_parameter/vatPosTex = ExtResource("2_mhkl3")
+shader_parameter/vatRotTex = ExtResource("3_mj5mv")
