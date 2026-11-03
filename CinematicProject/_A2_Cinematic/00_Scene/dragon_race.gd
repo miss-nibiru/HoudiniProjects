@@ -53,9 +53,9 @@ func _process(delta: float) -> void:
 
 
 func _setup_vat() -> void:
-	_configure_clip("Intact", intact_material, intact_json, 574.0, false)
-	_configure_clip("Destroyed", destroyed_material, destroyed_json, 226.0, true)
-	_configure_clip("Winner", winner_material, winner_json, 800.0, false)
+	_configure_clip("intact", intact_material, intact_json, 574.0, false)
+	_configure_clip("destroyed", destroyed_material, destroyed_json, 226.0, true)
+	_configure_clip("winner", winner_material, winner_json, 800.0, false)
 	_apply_frame()
 
 
@@ -148,9 +148,9 @@ func _assign_material(node: Node, material: ShaderMaterial) -> void:
 func _apply_frame() -> void:
 	var broken: bool = source_frame >= BREAK_FRAME
 
-	var intact: Node3D = get_node_or_null("Intact") as Node3D
-	var destroyed: Node3D = get_node_or_null("Destroyed") as Node3D
-	var winner: Node3D = get_node_or_null("Winner") as Node3D
+	var intact: Node3D = get_node_or_null("intact") as Node3D
+	var destroyed: Node3D = get_node_or_null("destroyed") as Node3D
+	var winner: Node3D = get_node_or_null("winner") as Node3D
 
 	if intact != null:
 		intact.visible = not broken

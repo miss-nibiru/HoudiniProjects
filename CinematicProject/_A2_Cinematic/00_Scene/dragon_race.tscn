@@ -22,6 +22,7 @@ winner_json = "res://01_HoudiniExports/winner/vat_winner_data.json"
 [node name="intact_racers" parent="intact" unique_id=123346416 instance=ExtResource("1_ralfq")]
 
 [node name="destroyed" type="Node3D" parent="." unique_id=1608556648]
+visible = false
 
 [node name="vat_destroyed" parent="destroyed" unique_id=1916480330 instance=ExtResource("2_ku566")]
 
