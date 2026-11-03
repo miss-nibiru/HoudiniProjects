@@ -1,0 +1,14 @@
+[
+    {
+        "Axis System": "Right-Handed Y-Up",
+        "Bound Max X": 0.0,
+        "Bound Max Y": 1.399999976158142,
+        "Bound Max Z": -2.450000047683716,
+        "Bound Min X": -4.300000190734863,
+        "Bound Min Y": -1.1010000705718994,
+        "Bound Min Z": -9.899999618530273,
+        "Houdini FPS": 24.0,
+        "Name": "VAT",
+        "Two Position Textures": 0
+    }
+]
