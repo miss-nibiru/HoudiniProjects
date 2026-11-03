@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://decqcf3jiik2l"
-path="res://.godot/imported/cloth_test_pos.exr-410b69404ae3a9e6693c957d54dd6e91.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://01_HoudiniExports/cloth_test/cloth_test_pos.exr"
-dest_files=["res://.godot/imported/cloth_test_pos.exr-410b69404ae3a9e6693c957d54dd6e91.ctex"]
 
 [params]
 

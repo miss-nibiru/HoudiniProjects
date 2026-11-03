@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://elfgswa1xuuk"]
+
+[ext_resource type="Shader" uid="uid://chnm6f6o0rwa5" path="res://02_VATGodot/dragons/dragon_soft.gdshader" id="1_3drc1"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3drc1")
+shader_parameter/_isTexHdr = false
+shader_parameter/_boundMax = Vector3(0, 0, 0)
+shader_parameter/_boundMin = Vector3(0, 0, 0)
+shader_parameter/_houdiniFPS = 0.0
+shader_parameter/_frameCount = 0.0
+shader_parameter/_surfaceNormals = false
+shader_parameter/_interpolate = false
+shader_parameter/_gameTimeAtFirstFrame = 0.0
+shader_parameter/_playbackSpeed = 0.0
+shader_parameter/_displayFrame = 0.0
+shader_parameter/_autoPlayback = false
+shader_parameter/base_color = Color(0.2, 0.65, 1, 1)
+shader_parameter/use_base_texture = false

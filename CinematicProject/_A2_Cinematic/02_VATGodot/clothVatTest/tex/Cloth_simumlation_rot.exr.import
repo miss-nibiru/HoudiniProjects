@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc8v83bjpplvi"
-path="res://.godot/imported/Cloth_simumlation_rot.exr-5081b0d5512534fac663d98942e17838.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://02_VATGodot/clothVatTest/tex/Cloth_simumlation_rot.exr"
-dest_files=["res://.godot/imported/Cloth_simumlation_rot.exr-5081b0d5512534fac663d98942e17838.ctex"]
 
 [params]
 

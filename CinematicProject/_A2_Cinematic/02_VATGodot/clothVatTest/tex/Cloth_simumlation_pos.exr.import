@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://02tlb8g4aume"
-path="res://.godot/imported/Cloth_simumlation_pos.exr-58c31a52517d4a1b71190de4c8d5e305.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://02_VATGodot/clothVatTest/tex/Cloth_simumlation_pos.exr"
-dest_files=["res://.godot/imported/Cloth_simumlation_pos.exr-58c31a52517d4a1b71190de4c8d5e305.ctex"]
 
 [params]
 
