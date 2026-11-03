@@ -9,11 +9,13 @@ const LAST_FRAME: float = 800.0
 @export var intact_material: ShaderMaterial
 @export var destroyed_material: ShaderMaterial
 @export var winner_material: ShaderMaterial
+@export var ribbon_material: ShaderMaterial
 
 @export_category("Exported JSON Files")
 @export_file("*.json") var intact_json: String
 @export_file("*.json") var destroyed_json: String
 @export_file("*.json") var winner_json: String
+@export_file("*.json") var ribbon_json: String
 
 @export_category("Timeline")
 @export var autoplay: bool = true
@@ -56,6 +58,7 @@ func _setup_vat() -> void:
 	_configure_clip("intact", intact_material, intact_json, 574.0, false)
 	_configure_clip("destroyed", destroyed_material, destroyed_json, 226.0, true)
 	_configure_clip("winner", winner_material, winner_json, 800.0, false)
+	_configure_clip("finish_ribbon", ribbon_material, ribbon_json, 800.0, false)
 	_apply_frame()
 
 
@@ -174,6 +177,9 @@ func _apply_frame() -> void:
 		winner_material.set_shader_parameter(
 			"_displayFrame", source_frame
 		)
+	
+	if ribbon_material != null:
+		ribbon_material.set_shader_parameter("_displayFrame", source_frame)
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
