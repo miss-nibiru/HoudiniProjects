@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://cchmdqcts2kvi"]
 
-[ext_resource type="Texture2D" uid="uid://jq8i7t1j8nrd" path="res://01_HoudiniExports/finish_ribbon/finish_pos.exr" id="1_utsxd"]
-[ext_resource type="Texture2D" uid="uid://coo0xfh4l0nk4" path="res://01_HoudiniExports/finish_ribbon/finish_rot.exr" id="2_til4c"]
+[ext_resource type="Texture2D" uid="uid://beikyf6slkw0f" path="res://01_HoudiniExports/finish_ribbon/finish_pos.exr" id="1_utsxd"]
+[ext_resource type="Texture2D" uid="uid://bgwnimg3rnmjc" path="res://01_HoudiniExports/finish_ribbon/finish_rot.exr" id="2_til4c"]
 
 [sub_resource type="Shader" id="Shader_utsxd"]
 code = "shader_type spatial;
@@ -61,7 +61,7 @@ shader_parameter/_interpolate = true
 shader_parameter/_gameTimeAtFirstFrame = 0.0
 shader_parameter/_playbackSpeed = 1.0
 shader_parameter/_displayFrame = 1.0
-shader_parameter/_autoPlayback = false
+shader_parameter/_autoPlayback = true
 shader_parameter/vatPosTex = ExtResource("1_utsxd")
 shader_parameter/vatRotTex = ExtResource("2_til4c")
 shader_parameter/base_color = Color(1, 1, 1, 1)

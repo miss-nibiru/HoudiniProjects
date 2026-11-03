@@ -7,17 +7,19 @@
 [ext_resource type="Material" uid="uid://ddkbrum0yefrr" path="res://02_VATGodot/dragons/destroyed_dragons.tres" id="3_ean8n"]
 [ext_resource type="PackedScene" uid="uid://bpguu8evc5mm3" path="res://01_HoudiniExports/winner/vat_winner.gltf" id="3_fbtag"]
 [ext_resource type="Material" uid="uid://elfgswa1xuuk" path="res://02_VATGodot/dragons/winner_dragon.tres" id="4_i3f2j"]
-[ext_resource type="PackedScene" uid="uid://dr78cvm7cjtsg" path="res://01_HoudiniExports/finish_ribbon/finish.gltf" id="8_ean8n"]
+[ext_resource type="Material" uid="uid://cchmdqcts2kvi" path="res://02_VATGodot/dragons/finish_ribbon.tres" id="5_i3f2j"]
+[ext_resource type="PackedScene" uid="uid://fp2kju6ytvj5" path="res://01_HoudiniExports/finish_ribbon/finish.gltf" id="8_ean8n"]
 
 [node name="DragonRace" type="Node3D" unique_id=961507185]
 script = ExtResource("1_ku566")
 intact_material = ExtResource("2_dgdow")
 destroyed_material = ExtResource("3_ean8n")
 winner_material = ExtResource("4_i3f2j")
+ribbon_material = ExtResource("5_i3f2j")
 intact_json = "res://01_HoudiniExports/racers/intact_racers_data.json"
 destroyed_json = "res://01_HoudiniExports/destroyed/vat_destroyed_data.json"
 winner_json = "res://01_HoudiniExports/winner/vat_winner_data.json"
-ribbon_json = null
+ribbon_json = "res://01_HoudiniExports/finish_ribbon/finish_ribbon.json"
 source_frame = 600.0
 
 [node name="001_Camera" type="Camera3D" parent="." unique_id=487219001]
