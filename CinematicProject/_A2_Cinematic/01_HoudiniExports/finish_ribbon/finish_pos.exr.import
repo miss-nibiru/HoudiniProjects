@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://beikyf6slkw0f"
-path.bptc="res://.godot/imported/finish_pos.exr-13c805905581fcb2b275b263adcb32a8.bptc.ctex"
+path="res://.godot/imported/finish_pos.exr-13c805905581fcb2b275b263adcb32a8.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://01_HoudiniExports/finish_ribbon/finish_pos.exr"
-dest_files=["res://.godot/imported/finish_pos.exr-13c805905581fcb2b275b263adcb32a8.bptc.ctex"]
+dest_files=["res://.godot/imported/finish_pos.exr-13c805905581fcb2b275b263adcb32a8.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
