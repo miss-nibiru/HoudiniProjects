@@ -1,6 +1,8 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://elfgswa1xuuk"]
 
 [ext_resource type="Shader" uid="uid://chnm6f6o0rwa5" path="res://02_VATGodot/dragons/dragon_soft.gdshader" id="1_3drc1"]
+[ext_resource type="Texture2D" uid="uid://bnrl0rckp8tch" path="res://01_HoudiniExports/winner/vat_winner_pos.exr" id="2_w8fdu"]
+[ext_resource type="Texture2D" uid="uid://cgyrsj52kp35t" path="res://01_HoudiniExports/winner/vat_winner_rot.exr" id="3_jy2vm"]
 
 [resource]
 render_priority = 0
@@ -16,5 +18,7 @@ shader_parameter/_gameTimeAtFirstFrame = 0.0
 shader_parameter/_playbackSpeed = 0.0
 shader_parameter/_displayFrame = 0.0
 shader_parameter/_autoPlayback = false
+shader_parameter/vatPosTex = ExtResource("2_w8fdu")
+shader_parameter/vatRotTex = ExtResource("3_jy2vm")
 shader_parameter/base_color = Color(0.2, 0.65, 1, 1)
 shader_parameter/use_base_texture = false

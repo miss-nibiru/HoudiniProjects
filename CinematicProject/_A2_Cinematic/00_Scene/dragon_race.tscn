@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b3eft50kc0ujk"]
+
+[ext_resource type="Script" uid="uid://cpg4go282y6j0" path="res://00_Scene/dragon_race.gd" id="1_ku566"]
+[ext_resource type="PackedScene" uid="uid://dudmy0n6vrt5j" path="res://01_HoudiniExports/racers/intact_racers.gltf" id="1_ralfq"]
+[ext_resource type="Material" uid="uid://dh35cyrr11vfu" path="res://02_VATGodot/dragons/intact_dragons.tres" id="2_dgdow"]
+[ext_resource type="PackedScene" uid="uid://qdgxc4x4xo74" path="res://01_HoudiniExports/destroyed/vat_destroyed.gltf" id="2_ku566"]
+[ext_resource type="Material" uid="uid://ddkbrum0yefrr" path="res://02_VATGodot/dragons/destroyed_dragons.tres" id="3_ean8n"]
+[ext_resource type="PackedScene" uid="uid://bpguu8evc5mm3" path="res://01_HoudiniExports/winner/vat_winner.gltf" id="3_fbtag"]
+[ext_resource type="Material" uid="uid://elfgswa1xuuk" path="res://02_VATGodot/dragons/winner_dragon.tres" id="4_i3f2j"]
+
+[node name="DragonRace" type="Node3D" unique_id=961507185]
+script = ExtResource("1_ku566")
+intact_material = ExtResource("2_dgdow")
+destroyed_material = ExtResource("3_ean8n")
+winner_material = ExtResource("4_i3f2j")
+intact_json = "res://01_HoudiniExports/racers/intact_racers_data.json"
+destroyed_json = "res://01_HoudiniExports/destroyed/vat_destroyed_data.json"
+winner_json = "res://01_HoudiniExports/winner/vat_winner_data.json"
+
+[node name="intact" type="Node3D" parent="." unique_id=189542855]
+
+[node name="intact_racers" parent="intact" unique_id=123346416 instance=ExtResource("1_ralfq")]
+
+[node name="destroyed" type="Node3D" parent="." unique_id=1608556648]
+
+[node name="vat_destroyed" parent="destroyed" unique_id=1916480330 instance=ExtResource("2_ku566")]
+
+[node name="winner" type="Node3D" parent="." unique_id=565531226]
+
+[node name="vat_winner" parent="winner" unique_id=626230215 instance=ExtResource("3_fbtag")]

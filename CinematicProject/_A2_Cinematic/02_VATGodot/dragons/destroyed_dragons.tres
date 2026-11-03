@@ -1,6 +1,8 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://ddkbrum0yefrr"]
 
 [ext_resource type="Shader" uid="uid://cd5ldabcw17lv" path="res://02_VATGodot/dragons/dragon_rigid.gdshader" id="1_lanit"]
+[ext_resource type="Texture2D" uid="uid://c2dk1b8bxapl4" path="res://01_HoudiniExports/destroyed/vat_destroyed_pos.exr" id="2_1actv"]
+[ext_resource type="Texture2D" uid="uid://b1lilg6u7meug" path="res://01_HoudiniExports/destroyed/vat_destroyed_rot.exr" id="3_v28cs"]
 
 [resource]
 render_priority = 0
@@ -22,5 +24,7 @@ shader_parameter/_playbackSpeed = 0.0
 shader_parameter/_displayFrame = 0.0
 shader_parameter/_autoPlayback = false
 shader_parameter/_interpolateCol = false
+shader_parameter/vatPosTex = ExtResource("2_1actv")
+shader_parameter/vatRotTex = ExtResource("3_v28cs")
 shader_parameter/base_color = Color(0.2, 0.65, 1, 1)
 shader_parameter/use_base_texture = false
