@@ -17,6 +17,9 @@ intact_json = "res://01_HoudiniExports/racers/intact_racers_data.json"
 destroyed_json = "res://01_HoudiniExports/destroyed/vat_destroyed_data.json"
 winner_json = "res://01_HoudiniExports/winner/vat_winner_data.json"
 
+[node name="001_Camera" type="Camera3D" parent="." unique_id=487219001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.731268, 1.9196644, 9.167553)
+
 [node name="intact" type="Node3D" parent="." unique_id=189542855]
 
 [node name="intact_racers" parent="intact" unique_id=123346416 instance=ExtResource("1_ralfq")]

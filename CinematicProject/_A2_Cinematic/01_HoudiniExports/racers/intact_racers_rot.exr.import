@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvoy424ccwhtn"
-path.bptc="res://.godot/imported/intact_racers_rot.exr-4be21a5733bb9789a7552938fe22c042.bptc.ctex"
+path="res://.godot/imported/intact_racers_rot.exr-4be21a5733bb9789a7552938fe22c042.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://01_HoudiniExports/racers/intact_racers_rot.exr"
-dest_files=["res://.godot/imported/intact_racers_rot.exr-4be21a5733bb9789a7552938fe22c042.bptc.ctex"]
+dest_files=["res://.godot/imported/intact_racers_rot.exr-4be21a5733bb9789a7552938fe22c042.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

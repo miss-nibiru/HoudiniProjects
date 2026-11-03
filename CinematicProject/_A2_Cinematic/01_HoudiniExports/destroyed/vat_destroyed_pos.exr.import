@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2dk1b8bxapl4"
-path.bptc="res://.godot/imported/vat_destroyed_pos.exr-00234d755d52d0e7f65a4005c41e28cf.bptc.ctex"
+path="res://.godot/imported/vat_destroyed_pos.exr-00234d755d52d0e7f65a4005c41e28cf.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://01_HoudiniExports/destroyed/vat_destroyed_pos.exr"
-dest_files=["res://.godot/imported/vat_destroyed_pos.exr-00234d755d52d0e7f65a4005c41e28cf.bptc.ctex"]
+dest_files=["res://.godot/imported/vat_destroyed_pos.exr-00234d755d52d0e7f65a4005c41e28cf.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
