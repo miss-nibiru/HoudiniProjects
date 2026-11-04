@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bpguu8evc5mm3" path="res://01_HoudiniExports/winner/vat_winner.gltf" id="3_fbtag"]
 [ext_resource type="Material" uid="uid://elfgswa1xuuk" path="res://02_VATGodot/dragons/winner_dragon.tres" id="4_i3f2j"]
 [ext_resource type="Material" uid="uid://cchmdqcts2kvi" path="res://02_VATGodot/dragons/finish_ribbon.tres" id="5_i3f2j"]
+[ext_resource type="PackedScene" uid="uid://drpksrn5m4avd" path="res://01_HoudiniExports/environment/env.glb" id="6_x81p7"]
 [ext_resource type="PackedScene" uid="uid://fp2kju6ytvj5" path="res://01_HoudiniExports/finish_ribbon/finish.gltf" id="8_ean8n"]
 
 [node name="DragonRace" type="Node3D" unique_id=961507185]
@@ -23,6 +24,10 @@ ribbon_json = "res://01_HoudiniExports/finish_ribbon/finish_ribbon.json"
 
 [node name="001_Camera" type="Camera3D" parent="." unique_id=487219001]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.731268, 1.9196644, 9.167553)
+
+[node name="environment" type="Node3D" parent="." unique_id=289812651]
+
+[node name="env" parent="environment" unique_id=1318800273 instance=ExtResource("6_x81p7")]
 
 [node name="intact" type="Node3D" parent="." unique_id=189542855]
 
