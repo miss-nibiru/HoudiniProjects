@@ -1,5 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://cchmdqcts2kvi"]
 
+[ext_resource type="Texture2D" uid="uid://qdbt6gsxvnh" path="res://00_Scene/checkered.png" id="1_til4c"]
 [ext_resource type="Texture2D" uid="uid://beikyf6slkw0f" path="res://01_HoudiniExports/finish_ribbon/finish_pos.exr" id="1_utsxd"]
 [ext_resource type="Texture2D" uid="uid://bgwnimg3rnmjc" path="res://01_HoudiniExports/finish_ribbon/finish_rot.exr" id="2_til4c"]
 
@@ -65,4 +66,5 @@ shader_parameter/_autoPlayback = false
 shader_parameter/vatPosTex = ExtResource("1_utsxd")
 shader_parameter/vatRotTex = ExtResource("2_til4c")
 shader_parameter/base_color = Color(1, 1, 1, 1)
-shader_parameter/use_base_texture = false
+shader_parameter/use_base_texture = true
+shader_parameter/base_texture = ExtResource("1_til4c")

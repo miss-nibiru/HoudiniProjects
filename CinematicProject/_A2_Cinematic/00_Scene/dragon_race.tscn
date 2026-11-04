@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://fp2kju6ytvj5" path="res://01_HoudiniExports/finish_ribbon/finish.gltf" id="8_ean8n"]
 [ext_resource type="PackedScene" uid="uid://nyhv2kil14kn" path="res://01_HoudiniExports/flags/flags.gltf" id="11_4ll42"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvtbe"]
+vertex_color_use_as_albedo = true
+
 [node name="DragonRace" type="Node3D" unique_id=961507185]
 script = ExtResource("1_ku566")
 intact_material = ExtResource("2_dgdow")
@@ -32,6 +35,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.731268, 1.9196644, 9.16755
 [node name="environment" type="Node3D" parent="." unique_id=289812651]
 
 [node name="env" parent="environment" unique_id=1318800273 instance=ExtResource("6_x81p7")]
+
+[node name="out_environment" parent="environment/env" index="0" unique_id=778241783]
+surface_material_override/0 = SubResource("StandardMaterial3D_dvtbe")
 
 [node name="intact" type="Node3D" parent="." unique_id=189542855]
 
@@ -58,9 +64,10 @@ custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
 
 [node name="flags" parent="flags" unique_id=1985880442 instance=ExtResource("11_4ll42")]
 
-[node name="Mesh" parent="flags/flags" index="0" unique_id=1046886221]
+[node name="Mesh" parent="flags/flags" index="0" unique_id=671817013]
 material_override = ExtResource("6_dvtbe")
 custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
 
+[editable path="environment/env"]
 [editable path="finish_ribbon/finish"]
 [editable path="flags/flags"]

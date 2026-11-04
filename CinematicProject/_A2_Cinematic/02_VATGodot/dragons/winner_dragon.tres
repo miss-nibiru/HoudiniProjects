@@ -1,24 +1,26 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://elfgswa1xuuk"]
 
 [ext_resource type="Shader" uid="uid://chnm6f6o0rwa5" path="res://02_VATGodot/dragons/dragon_soft.gdshader" id="1_3drc1"]
+[ext_resource type="Texture2D" uid="uid://5lxadwakwpgh" path="res://00_Scene/dragonlogo.png" id="2_jy2vm"]
 [ext_resource type="Texture2D" uid="uid://bnrl0rckp8tch" path="res://01_HoudiniExports/winner/vat_winner_pos.exr" id="2_w8fdu"]
 [ext_resource type="Texture2D" uid="uid://cgyrsj52kp35t" path="res://01_HoudiniExports/winner/vat_winner_rot.exr" id="3_jy2vm"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_3drc1")
-shader_parameter/_isTexHdr = false
-shader_parameter/_boundMax = Vector3(0, 0, 0)
-shader_parameter/_boundMin = Vector3(0, 0, 0)
-shader_parameter/_houdiniFPS = 0.0
-shader_parameter/_frameCount = 0.0
+shader_parameter/_isTexHdr = true
+shader_parameter/_boundMax = Vector3(11, 1.4, 7.15)
+shader_parameter/_boundMin = Vector3(-11.1, -0.31300002, -7.1)
+shader_parameter/_houdiniFPS = 24.0
+shader_parameter/_frameCount = 800.0
 shader_parameter/_surfaceNormals = false
-shader_parameter/_interpolate = false
+shader_parameter/_interpolate = true
 shader_parameter/_gameTimeAtFirstFrame = 0.0
-shader_parameter/_playbackSpeed = 0.0
-shader_parameter/_displayFrame = 0.0
+shader_parameter/_playbackSpeed = 1.0
+shader_parameter/_displayFrame = 1.0
 shader_parameter/_autoPlayback = false
 shader_parameter/vatPosTex = ExtResource("2_w8fdu")
 shader_parameter/vatRotTex = ExtResource("3_jy2vm")
-shader_parameter/base_color = Color(0.2, 0.65, 1, 1)
-shader_parameter/use_base_texture = false
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/use_base_texture = true
+shader_parameter/base_texture = ExtResource("2_jy2vm")

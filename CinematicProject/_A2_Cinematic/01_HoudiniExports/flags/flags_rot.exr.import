@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsxgfcbhm3lgp"
-path.bptc="res://.godot/imported/flags_rot.exr-5ca99717cd1144b532719f5d062c4eef.bptc.ctex"
+path="res://.godot/imported/flags_rot.exr-5ca99717cd1144b532719f5d062c4eef.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://01_HoudiniExports/flags/flags_rot.exr"
-dest_files=["res://.godot/imported/flags_rot.exr-5ca99717cd1144b532719f5d062c4eef.bptc.ctex"]
+dest_files=["res://.godot/imported/flags_rot.exr-5ca99717cd1144b532719f5d062c4eef.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

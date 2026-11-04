@@ -7,18 +7,18 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_oq3ym")
-shader_parameter/_isTexHdr = false
-shader_parameter/_boundMax = Vector3(0, 0, 0)
-shader_parameter/_boundMin = Vector3(0, 0, 0)
-shader_parameter/_houdiniFPS = 0.0
-shader_parameter/_frameCount = 0.0
+shader_parameter/_isTexHdr = true
+shader_parameter/_boundMax = Vector3(12.4, 1.4, 9.150001)
+shader_parameter/_boundMin = Vector3(-13.1, -0.326, -8.8)
+shader_parameter/_houdiniFPS = 24.0
+shader_parameter/_frameCount = 574.0
 shader_parameter/_surfaceNormals = false
-shader_parameter/_interpolate = false
+shader_parameter/_interpolate = true
 shader_parameter/_gameTimeAtFirstFrame = 0.0
-shader_parameter/_playbackSpeed = 0.0
-shader_parameter/_displayFrame = 0.0
+shader_parameter/_playbackSpeed = 1.0
+shader_parameter/_displayFrame = 1.0
 shader_parameter/_autoPlayback = false
 shader_parameter/vatPosTex = ExtResource("2_hobk3")
 shader_parameter/vatRotTex = ExtResource("3_hlv38")
-shader_parameter/base_color = Color(0.2, 0.65, 1, 1)
+shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/use_base_texture = false
