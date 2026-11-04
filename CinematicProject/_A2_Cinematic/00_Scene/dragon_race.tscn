@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bpguu8evc5mm3" path="res://01_HoudiniExports/winner/vat_winner.gltf" id="3_fbtag"]
 [ext_resource type="Material" uid="uid://elfgswa1xuuk" path="res://02_VATGodot/dragons/winner_dragon.tres" id="4_i3f2j"]
 [ext_resource type="Material" uid="uid://cchmdqcts2kvi" path="res://02_VATGodot/dragons/finish_ribbon.tres" id="5_i3f2j"]
+[ext_resource type="Material" uid="uid://byimict0nbloa" path="res://02_VATGodot/dragons/flags.tres" id="6_dvtbe"]
 [ext_resource type="PackedScene" uid="uid://drpksrn5m4avd" path="res://01_HoudiniExports/environment/env.glb" id="6_x81p7"]
 [ext_resource type="PackedScene" uid="uid://fp2kju6ytvj5" path="res://01_HoudiniExports/finish_ribbon/finish.gltf" id="8_ean8n"]
+[ext_resource type="PackedScene" uid="uid://nyhv2kil14kn" path="res://01_HoudiniExports/flags/flags.gltf" id="11_4ll42"]
 
 [node name="DragonRace" type="Node3D" unique_id=961507185]
 script = ExtResource("1_ku566")
@@ -17,10 +19,12 @@ intact_material = ExtResource("2_dgdow")
 destroyed_material = ExtResource("3_ean8n")
 winner_material = ExtResource("4_i3f2j")
 ribbon_material = ExtResource("5_i3f2j")
+flags_material = ExtResource("6_dvtbe")
 intact_json = "res://01_HoudiniExports/racers/intact_racers_data.json"
 destroyed_json = "res://01_HoudiniExports/destroyed/vat_destroyed_data.json"
 winner_json = "res://01_HoudiniExports/winner/vat_winner_data.json"
 ribbon_json = "res://01_HoudiniExports/finish_ribbon/finish_ribbon.json"
+flags_json = "res://01_HoudiniExports/flags/flags.json"
 
 [node name="001_Camera" type="Camera3D" parent="." unique_id=487219001]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.731268, 1.9196644, 9.167553)
@@ -50,4 +54,13 @@ visible = false
 material_override = ExtResource("5_i3f2j")
 custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
 
+[node name="flags" type="Node3D" parent="." unique_id=1917526348]
+
+[node name="flags" parent="flags" unique_id=1985880442 instance=ExtResource("11_4ll42")]
+
+[node name="Mesh" parent="flags/flags" index="0" unique_id=1046886221]
+material_override = ExtResource("6_dvtbe")
+custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
+
 [editable path="finish_ribbon/finish"]
+[editable path="flags/flags"]

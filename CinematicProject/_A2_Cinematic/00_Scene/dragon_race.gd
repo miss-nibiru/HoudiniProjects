@@ -10,12 +10,15 @@ const LAST_FRAME: float = 800.0
 @export var destroyed_material: ShaderMaterial
 @export var winner_material: ShaderMaterial
 @export var ribbon_material: ShaderMaterial
+@export var flags_material: ShaderMaterial
 
 @export_category("Exported JSON Files")
 @export_file("*.json") var intact_json: String
 @export_file("*.json") var destroyed_json: String
 @export_file("*.json") var winner_json: String
 @export_file("*.json") var ribbon_json: String
+@export_file("*.json") var flags_json: String
+
 
 @export_category("Timeline")
 @export var autoplay: bool = true
@@ -59,6 +62,7 @@ func _setup_vat() -> void:
 	_configure_clip("destroyed", destroyed_material, destroyed_json, 226.0, true)
 	_configure_clip("winner", winner_material, winner_json, 800.0, false)
 	_configure_clip("finish_ribbon", ribbon_material, ribbon_json, 800.0, false)
+	_configure_clip("flags", flags_material, flags_json, 90.0, false)
 	_apply_frame()
 
 
@@ -150,36 +154,32 @@ func _assign_material(node: Node, material: ShaderMaterial) -> void:
 
 func _apply_frame() -> void:
 	var broken: bool = source_frame >= BREAK_FRAME
-
 	var intact: Node3D = get_node_or_null("intact") as Node3D
 	var destroyed: Node3D = get_node_or_null("destroyed") as Node3D
 	var winner: Node3D = get_node_or_null("winner") as Node3D
-
 	if intact != null:
 		intact.visible = not broken
 	if destroyed != null:
 		destroyed.visible = broken
 	if winner != null:
 		winner.visible = true
-
 	if intact_material != null:
 		intact_material.set_shader_parameter(
 			"_displayFrame", clampf(source_frame, 1.0, 574.0)
 		)
-
 	if destroyed_material != null:
 		destroyed_material.set_shader_parameter(
 			"_displayFrame",
 			clampf(source_frame - BREAK_FRAME + 1.0, 1.0, 226.0)
 		)
-
 	if winner_material != null:
 		winner_material.set_shader_parameter(
 			"_displayFrame", source_frame
 		)
-	
 	if ribbon_material != null:
 		ribbon_material.set_shader_parameter("_displayFrame", source_frame)
+	if flags_material != null:
+		flags_material.set_shader_parameter( "_displayFrame", fposmod(source_frame - 1.0, 90.0) + 1.0)
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
