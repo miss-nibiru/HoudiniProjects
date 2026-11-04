@@ -12,9 +12,21 @@
 [ext_resource type="PackedScene" uid="uid://drpksrn5m4avd" path="res://01_HoudiniExports/environment/env.glb" id="6_x81p7"]
 [ext_resource type="PackedScene" uid="uid://fp2kju6ytvj5" path="res://01_HoudiniExports/finish_ribbon/finish.gltf" id="8_ean8n"]
 [ext_resource type="PackedScene" uid="uid://nyhv2kil14kn" path="res://01_HoudiniExports/flags/flags.gltf" id="11_4ll42"]
+[ext_resource type="PackedScene" uid="uid://b8xe76m6o2lfs" path="res://01_HoudiniExports/environment/river.glb" id="13_o7tyt"]
+[ext_resource type="Shader" uid="uid://eg7um32hxsrg" path="res://00_Scene/river.gdshader" id="14_aqo4r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvtbe"]
 vertex_color_use_as_albedo = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_exjov"]
+render_priority = 0
+shader = ExtResource("14_aqo4r")
+shader_parameter/water_dark = Color(0.02, 0.23, 0.34, 1)
+shader_parameter/water_light = Color(0.09, 0.49, 0.56, 1)
+shader_parameter/river_center = Vector2(0, 0)
+shader_parameter/oval_radius = Vector2(22, 15)
+shader_parameter/current_speed = 0.50000002375
+shader_parameter/wave_height = 0.04
 
 [node name="DragonRace" type="Node3D" unique_id=961507185]
 script = ExtResource("1_ku566")
@@ -30,13 +42,13 @@ ribbon_json = "res://01_HoudiniExports/finish_ribbon/finish_ribbon.json"
 flags_json = "res://01_HoudiniExports/flags/flags.json"
 
 [node name="001_Camera" type="Camera3D" parent="." unique_id=487219001]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.731268, 1.9196644, 9.167553)
+transform = Transform3D(0.8897617, 0, -0.4564255, 0, 1, 0, 0.4564255, 0, 0.8897617, 6.860224, 1.1967344, 5.177432)
 
 [node name="environment" type="Node3D" parent="." unique_id=289812651]
 
 [node name="env" parent="environment" unique_id=1318800273 instance=ExtResource("6_x81p7")]
 
-[node name="out_environment" parent="environment/env" index="0" unique_id=778241783]
+[node name="out_environment" parent="environment/env" index="0" unique_id=777579988]
 surface_material_override/0 = SubResource("StandardMaterial3D_dvtbe")
 
 [node name="intact" type="Node3D" parent="." unique_id=189542855]
@@ -68,6 +80,14 @@ custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
 material_override = ExtResource("6_dvtbe")
 custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
 
+[node name="water" type="Node3D" parent="." unique_id=1838680336]
+
+[node name="river" parent="water" unique_id=1234235338 instance=ExtResource("13_o7tyt")]
+
+[node name="out_river_base" parent="water/river" index="0" unique_id=2051442350]
+surface_material_override/0 = SubResource("ShaderMaterial_exjov")
+
 [editable path="environment/env"]
 [editable path="finish_ribbon/finish"]
 [editable path="flags/flags"]
+[editable path="water/river"]

@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://byimict0nbloa"]
 
 [ext_resource type="Texture2D" uid="uid://dmbiuljvd7em1" path="res://01_HoudiniExports/flags/flags_pos.exr" id="1_ab8t7"]
-[ext_resource type="Texture2D" uid="uid://5lxadwakwpgh" path="res://00_Scene/dragonlogo.png" id="1_exjov"]
+[ext_resource type="Texture2D" uid="uid://5lxadwakwpgh" path="res://00_Scene/textures/dragonlogo.png" id="1_exjov"]
 [ext_resource type="Texture2D" uid="uid://bsxgfcbhm3lgp" path="res://01_HoudiniExports/flags/flags_rot.exr" id="2_exjov"]
 
 [sub_resource type="Shader" id="Shader_d4fj6"]
@@ -60,8 +60,8 @@ shader_parameter/_frameCount = 90.0
 shader_parameter/_surfaceNormals = false
 shader_parameter/_interpolate = true
 shader_parameter/_gameTimeAtFirstFrame = 0.0
-shader_parameter/_playbackSpeed = 0.0
-shader_parameter/_displayFrame = 0.0
+shader_parameter/_playbackSpeed = 1.0
+shader_parameter/_displayFrame = 1.0
 shader_parameter/_autoPlayback = false
 shader_parameter/vatPosTex = ExtResource("1_ab8t7")
 shader_parameter/vatRotTex = ExtResource("2_exjov")
