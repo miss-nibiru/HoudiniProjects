@@ -34,7 +34,7 @@ shader_parameter/oval_radius = Vector2(22, 15)
 shader_parameter/current_speed = 0.50000002375
 shader_parameter/wave_height = 0.04
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_r364f"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3purt"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("16_3purt")
@@ -59,7 +59,7 @@ shader_parameter/water_light = Color(0.09, 0.49, 0.56, 1)
 shader_parameter/effect_opacity = 0.0
 
 [sub_resource type="Animation" id="Animation_f5md3"]
-length = 0.001
+length = 33.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -91,10 +91,66 @@ tracks/2/path = NodePath(".:source_frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 3, 6, 23.95, 33),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [1.0]
+"values": [1.0, 1.0, 73.0, 575.0, 800.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("01_CAMERAS/002_CameraSide")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.9666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("01_CAMERAS/003_CameraChase")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(11.166667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("01_CAMERAS/004_CameraCrash")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(23.133333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("01_CAMERAS/005_CameraFinish")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(28.233334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_3purt"]
@@ -231,11 +287,11 @@ autoplay = false
 [node name="01_CAMERAS" type="Node" parent="." unique_id=2127359349]
 
 [node name="001_CameraStart" type="Camera3D" parent="01_CAMERAS" unique_id=487219001]
-transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 5, 12)
+transform = Transform3D(1, 0, 0, 0, 0.96592575, 0.258819, 0, -0.258819, 0.96592575, 0, 5, 12)
 fov = 60.0
 
 [node name="002_CameraSide" type="Camera3D" parent="01_CAMERAS" unique_id=1289413682]
-transform = Transform3D(0.02379683, 0.49252638, -0.86997217, -0.006159486, 0.8702743, 0.49252895, 0.99969786, -0.006362047, 0.023743479, 3.254808, 2.5253792, 3.4598265)
+transform = Transform3D(0.023796787, 0.49252632, -0.8699721, -0.0061594853, 0.87027425, 0.49252892, 0.99969786, -0.0063620256, 0.023743441, 3.254808, 2.5253792, 3.4598265)
 fov = 60.0
 
 [node name="003_CameraChase" type="Camera3D" parent="01_CAMERAS" unique_id=810108358]
@@ -295,7 +351,9 @@ surface_material_override/0 = SubResource("ShaderMaterial_exjov")
 
 [node name="FluidSplash" parent="water" unique_id=419249328 instance=ExtResource("15_fluid")]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 8.5, 0.91, 0.5)
-material = SubResource("ShaderMaterial_r364f")
+visible = true
+start_frame = 1.0
+material = SubResource("ShaderMaterial_3purt")
 
 [node name="race_cinematic" type="AnimationPlayer" parent="." unique_id=69673402]
 libraries/ = SubResource("AnimationLibrary_f5md3")
