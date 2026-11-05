@@ -15,12 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://nyhv2kil14kn" path="res://01_HoudiniExports/flags/flags.gltf" id="11_4ll42"]
 [ext_resource type="PackedScene" uid="uid://b8xe76m6o2lfs" path="res://01_HoudiniExports/environment/river.glb" id="13_o7tyt"]
 [ext_resource type="Shader" uid="uid://eg7um32hxsrg" path="res://00_Scene/river.gdshader" id="14_aqo4r"]
-[ext_resource type="PackedScene" path="res://02_VATGodot/fluid_splash/fluid_splash.tscn" id="15_fluid"]
-[ext_resource type="Shader" uid="uid://brn7mdu53xhwv" path="res://02_VATGodot/fluid_splash/fluid_splash.gdshader" id="16_3purt"]
-[ext_resource type="Texture2D" uid="uid://dcau0qy0f03es" path="res://02_VATGodot/fluid_splash/tex/fluidSimulation_col.exr" id="17_f5md3"]
-[ext_resource type="Texture2D" uid="uid://m3suhtpyp5qn" path="res://02_VATGodot/fluid_splash/tex/fluidSimulation_lookup.png" id="18_w3jx5"]
-[ext_resource type="Texture2D" uid="uid://c2r11pq0hdii7" path="res://02_VATGodot/fluid_splash/tex/fluidSimulation_pos.exr" id="19_kqvlb"]
-[ext_resource type="Texture2D" uid="uid://cwdg14vlyqu32" path="res://02_VATGodot/fluid_splash/tex/fluidSimulation_rot.exr" id="20_orxy2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvtbe"]
 vertex_color_use_as_albedo = true
@@ -35,30 +29,6 @@ shader_parameter/river_center = Vector2(0, 0)
 shader_parameter/oval_radius = Vector2(22, 15)
 shader_parameter/current_speed = 0.50000002375
 shader_parameter/wave_height = 0.04
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3purt"]
-resource_local_to_scene = true
-render_priority = 0
-shader = ExtResource("16_3purt")
-shader_parameter/_isTexHdr = true
-shader_parameter/_boundMax = Vector3(6.03, 3.3, 5.55)
-shader_parameter/_boundMin = Vector3(-9.1, -7.33, -6.3)
-shader_parameter/_houdiniFPS = 24.0
-shader_parameter/_uvFromRG = false
-shader_parameter/_frameCount = 100.0
-shader_parameter/_surfaceNormals = false
-shader_parameter/_gameTimeAtFirstFrame = 0.0
-shader_parameter/_playbackSpeed = 1.0
-shader_parameter/_displayFrame = 1.0
-shader_parameter/_autoPlayback = false
-shader_parameter/vatColTex = ExtResource("17_f5md3")
-shader_parameter/vatPosTex = ExtResource("19_kqvlb")
-shader_parameter/vatRotTex = ExtResource("20_orxy2")
-shader_parameter/_lookupTexIsHdr = false
-shader_parameter/vatLookupTex = ExtResource("18_w3jx5")
-shader_parameter/water_dark = Color(0.02, 0.23, 0.34, 1)
-shader_parameter/water_light = Color(0.09, 0.49, 0.56, 1)
-shader_parameter/effect_opacity = 1.0
 
 [sub_resource type="Animation" id="Animation_f5md3"]
 length = 33.0
@@ -143,7 +113,7 @@ tracks/5/keys = {
 tracks/6/type = "method"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("01_CAMERAS/005_CameraFinish")
+tracks/6/path = NodePath("01_CAMERAS/006_CameraFinish")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -154,10 +124,154 @@ tracks/6/keys = {
 "method": &"make_current"
 }]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("01_CAMERAS/002_CameraSide:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.254808, 2.5253792, 3.4598265)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("01_CAMERAS/002_CameraSide:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5149932, -1.5435109, -0.0070775184)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("01_CAMERAS/003_CameraChase:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.715446, 1.2964649, 8.5712385)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("01_CAMERAS/003_CameraChase:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.26179942, -0.84177214, 1.5512832e-09)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("01_CAMERAS/004_CameraCrash:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.26179948, 2.5762548, -5.2917937e-09)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("01_CAMERAS/004_CameraCrash:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.4247065, 1.6776266, -3.7346134)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("01_CAMERAS/005_CameraImpact:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.6988378, 1.241302, -1.4888124)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("01_CAMERAS/005_CameraImpact:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("01_CAMERAS/006_CameraFinish:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.26179942, 1.2709259, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("01_CAMERAS/006_CameraFinish:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.7375555, 1.2283688, -5.3299103)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("01_CAMERAS/007_CameraSuperEnd:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("01_CAMERAS/007_CameraSuperEnd:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(8.392794, 1.2283688, 2.1816006)]
+}
 
 [sub_resource type="Animation" id="Animation_3purt"]
 resource_name = "dragon_race"
-length = 33.33333849341087
+length = 31.0
 step = 0.041666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -244,7 +358,7 @@ tracks/6/path = NodePath("01_CAMERAS/004_CameraCrash")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(17.375),
+"times": PackedFloat32Array(16.916666),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -254,16 +368,188 @@ tracks/6/keys = {
 tracks/7/type = "method"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("01_CAMERAS/005_CameraFinish")
+tracks/7/path = NodePath("01_CAMERAS/006_CameraFinish")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(24.166666),
+"times": PackedFloat32Array(24.875),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"make_current"
 }]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("01_CAMERAS/002_CameraSide:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(7.2236943, 12.641466),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(3.254808, 2.5253792, 3.4598265), Vector3(-2.0964785, 2.1060553, 5.8040533)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("01_CAMERAS/002_CameraSide:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(12.641466),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5149932, -1.5435109, -0.0070775184)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("01_CAMERAS/003_CameraChase:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(12.985452, 13.532832, 14.399859, 15.625885),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-2.715446, 1.2964649, 8.5712385), Vector3(-2.715446, 1.2964649, 9.713264), Vector3(-2.715446, 2.0076003, 10.780825), Vector3(-2.715446, 2.0076003, 10.780825)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("01_CAMERAS/003_CameraChase:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(12.985452, 13.532832, 14.399859, 15.625885),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.26179942, -0.84177214, 1.5512832e-09), Vector3(-0.26179942, -0.59709567, 1.30569875e-08), Vector3(-0.26179945, 0.106609784, 1.3056985e-08), Vector3(-0.26179945, 0.5101165, 1.3056985e-08)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("01_CAMERAS/004_CameraCrash:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(16.926426, 19.676546, 20.958334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.26179948, 2.5762548, -5.2917937e-09), Vector3(-0.26179945, 2.5762548, -5.2917937e-09), Vector3(-0.26179945, 2.619534, -5.2917937e-09)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("01_CAMERAS/004_CameraCrash:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(16.926426, 19.676546, 20.958334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-5.4247065, 1.6776266, -3.7346134), Vector3(-7.5890703, 1.3356647, -5.229493), Vector3(-6.155525, 1.8563533, -7.471092)]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("01_CAMERAS/005_CameraImpact")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(21.708334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("01_CAMERAS/005_CameraImpact:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(21.703516, 23.99622, 24.677483),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.6988378, 1.241302, -1.4888124), Vector3(-1.6988378, 2.2711139, -1.4888124), Vector3(1.648118, 1.3628259, -3.7799902)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("01_CAMERAS/005_CameraImpact:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(21.703516, 23.99622, 24.677483),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.3364709, -0.21722025, 0), Vector3(-0.336471, 0.48847702, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("01_CAMERAS/006_CameraFinish:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(24.89609, 25.392195, 26.208334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.26179942, 1.2709259, 0), Vector3(-0.26179942, 1.2709259, 0), Vector3(-0.26179942, 1.6525463, 4.5570268e-09)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("01_CAMERAS/006_CameraFinish:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(24.875, 25.392195, 25.813992),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(4.7375555, 1.2283688, -5.3299103), Vector3(5.535947, 1.2283688, -5.3299103), Vector3(7.0378885, 1.2283688, -5.3299103)]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("01_CAMERAS/007_CameraSuperEnd")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(26.708334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"make_current"
+}]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("01_CAMERAS/007_CameraSuperEnd:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(26.70548, 28.53157),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("01_CAMERAS/007_CameraSuperEnd:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(26.70548, 28.53157),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(8.392794, 1.2283688, 2.1816006), Vector3(9.974691, 0.7254772, 2.0129647)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f5md3"]
@@ -293,19 +579,27 @@ transform = Transform3D(1, 0, 0, 0, 0.9659257, 0.258819, 0, -0.258819, 0.9659257
 fov = 60.0
 
 [node name="002_CameraSide" type="Camera3D" parent="01_CAMERAS" unique_id=1289413682]
-transform = Transform3D(0.023796787, 0.49252632, -0.8699721, -0.0061594853, 0.87027425, 0.49252892, 0.99969786, -0.0063620256, 0.023743441, 3.254808, 2.5253792, 3.4598265)
+transform = Transform3D(0.023796787, 0.49252632, -0.8699721, -0.006159485, 0.87027425, 0.49252892, 0.99969786, -0.006362026, 0.023743441, 3.254808, 2.5253792, 3.4598265)
 fov = 60.0
 
 [node name="003_CameraChase" type="Camera3D" parent="01_CAMERAS" unique_id=810108358]
-transform = Transform3D(0.66614217, 0.19303368, -0.7204114, 1.4984246e-09, 0.9659259, 0.25881904, 0.7458249, -0.1724103, 0.6434439, -5.0226903, 1.2964649, 8.030504)
+transform = Transform3D(0.6661422, 0.19303371, -0.7204115, 1.4984247e-09, 0.96592593, 0.2588191, 0.7458249, -0.17241031, 0.643444, -2.715446, 1.2964649, 8.5712385)
 fov = 60.0
 
 [node name="004_CameraCrash" type="Camera3D" parent="01_CAMERAS" unique_id=1283690953]
-transform = Transform3D(-0.05735585, -0.25839305, 0.96433574, -5.0363598e-09, 0.9659258, 0.2588191, -0.99835384, 0.014844785, -0.055401497, -3.7989447, 1.6776266, -3.7346134)
+transform = Transform3D(-0.8444077, -0.13864969, 0.5174475, -5.11148e-09, 0.9659258, 0.2588191, -0.5357011, 0.21854886, -0.8156351, -5.4247065, 1.6776266, -3.7346134)
 fov = 60.0
 
-[node name="005_CameraFinish" type="Camera3D" parent="01_CAMERAS" unique_id=805439192]
-transform = Transform3D(0.29539645, -0.24726921, 0.92282116, 0, 0.9659259, 0.25881907, -0.9553748, -0.07645423, 0.28533104, 5.232358, 1.2283688, -5.8413477)
+[node name="005_CameraImpact" type="Camera3D" parent="01_CAMERAS" unique_id=712226250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6988378, 1.241302, -1.4888124)
+fov = 60.0
+
+[node name="006_CameraFinish" type="Camera3D" parent="01_CAMERAS" unique_id=805439192]
+transform = Transform3D(0.29539645, -0.24726921, 0.92282116, 0, 0.9659258, 0.25881907, -0.9553748, -0.07645424, 0.28533104, 4.7375555, 1.2283688, -5.3299103)
+fov = 60.0
+
+[node name="007_CameraSuperEnd" type="Camera3D" parent="01_CAMERAS" unique_id=1113663428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.392794, 1.2283688, 2.1816006)
 fov = 60.0
 
 [node name="environment" type="Node3D" parent="." unique_id=289812651]
@@ -351,12 +645,6 @@ custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
 
 [node name="out_river_base" parent="water/river" index="0" unique_id=2051442350]
 surface_material_override/0 = SubResource("ShaderMaterial_exjov")
-
-[node name="FluidSplash" parent="water" unique_id=419249328 instance=ExtResource("15_fluid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.388372, 0.91, 0.5)
-visible = true
-start_frame = 1.0
-material = SubResource("ShaderMaterial_3purt")
 
 [node name="race_cinematic" type="AnimationPlayer" parent="." unique_id=69673402]
 libraries/ = SubResource("AnimationLibrary_f5md3")
