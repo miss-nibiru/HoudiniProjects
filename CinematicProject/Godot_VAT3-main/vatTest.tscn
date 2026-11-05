@@ -36,8 +36,10 @@ shadow_enabled = true
 
 [node name="rigid_body_simulation_mesh_100F" parent="." unique_id=680925810 instance=ExtResource("2_0alca")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.578018, -2.38419e-07, -84.7305)
+visible = false
 
 [node name="Mesh" parent="rigid_body_simulation_mesh_100F" index="0" unique_id=1313205163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45963097, -0.010364294, -0.6429672)
 material_override = ExtResource("2_2jf81")
 
 [node name="fluidSimulation_mesh_100F" parent="." unique_id=1367674802 instance=ExtResource("6_panr7")]
@@ -48,12 +50,14 @@ material_override = ExtResource("4_t4ohf")
 
 [node name="particles_simulation_mesh_100F" parent="." unique_id=1460151935 instance=ExtResource("10_erqmm")]
 transform = Transform3D(-0.987884, 0.155193, 0, -0.0524933, -0.334147, 0.941058, 0.146046, 0.929656, 0.338245, 14.4815, 0, -90.0996)
+visible = false
 
 [node name="Mesh" parent="particles_simulation_mesh_100F" index="0" unique_id=1903868285]
 material_override = ExtResource("6_xolcm")
 
 [node name="Cloth_simumlation_mesh_100F" parent="." unique_id=1182427075 instance=ExtResource("8_hcw6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3958, 0, -39.8637)
+visible = false
 
 [node name="Mesh" parent="Cloth_simumlation_mesh_100F" index="0" unique_id=1274971207]
 material_override = ExtResource("8_h1vhy")
