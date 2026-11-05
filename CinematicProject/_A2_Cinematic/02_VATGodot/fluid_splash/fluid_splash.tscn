@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://02_VATGodot/fluid_splash/fluid_splash.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://02_VATGodot/fluid_splash/geo/fluidSimulation_mesh_100F.gltf" id="2_mesh"]
+[ext_resource type="Material" path="res://02_VATGodot/fluid_splash/fluid_splash.tres" id="3_material"]
+
+[node name="FluidSplash" type="Node3D"]
+visible = false
+script = ExtResource("1_script")
+material = ExtResource("3_material")
+
+[node name="FluidMesh" parent="." instance=ExtResource("2_mesh")]
+
+[node name="Mesh" parent="FluidMesh" index="0"]
+material_override = ExtResource("3_material")
+cast_shadow = 0
+custom_aabb = AABB(-10, -8, -7, 17, 12, 14)
+
+[editable path="FluidMesh"]
