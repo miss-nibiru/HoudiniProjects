@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://nyhv2kil14kn" path="res://01_HoudiniExports/flags/flags.gltf" id="11_4ll42"]
 [ext_resource type="PackedScene" uid="uid://b8xe76m6o2lfs" path="res://01_HoudiniExports/environment/river.glb" id="13_o7tyt"]
 [ext_resource type="Shader" uid="uid://eg7um32hxsrg" path="res://00_Scene/river.gdshader" id="14_aqo4r"]
+[ext_resource type="PackedScene" path="res://02_VATGodot/fluid_splash/fluid_splash.tscn" id="15_fluid"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvtbe"]
 vertex_color_use_as_albedo = true
@@ -86,6 +87,10 @@ custom_aabb = AABB(-100, -100, -100, 200, 200, 200)
 
 [node name="out_river_base" parent="water/river" index="0" unique_id=2051442350]
 surface_material_override/0 = SubResource("ShaderMaterial_exjov")
+
+[node name="FluidSplash" parent="water" instance=ExtResource("15_fluid")]
+position = Vector3(8.5, 0.91, 0.5)
+scale = Vector3(0.14, 0.14, 0.14)
 
 [editable path="environment/env"]
 [editable path="finish_ribbon/finish"]

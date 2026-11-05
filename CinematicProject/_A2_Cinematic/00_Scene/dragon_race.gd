@@ -153,6 +153,9 @@ func _assign_material(node: Node, material: ShaderMaterial) -> void:
 
 
 func _apply_frame() -> void:
+	var fluid_splash := get_node_or_null("water/FluidSplash")
+	if fluid_splash != null:
+		fluid_splash.set_cinematic_frame(source_frame)
 	var broken: bool = source_frame >= BREAK_FRAME
 	var intact: Node3D = get_node_or_null("intact") as Node3D
 	var destroyed: Node3D = get_node_or_null("destroyed") as Node3D
