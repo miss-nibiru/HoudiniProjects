@@ -12,19 +12,18 @@ const CINEMATIC_FPS: float = 24.0
 
 
 func _ready() -> void:
-    # The imported child scene can localize its own material copy. Bind the
-    # instance-local material that the cinematic actually drives.
-    $FluidMesh/Mesh.material_override = material
-
+	# The imported child scene can localize its own material copy. Bind the
+	# instance-local material that the cinematic actually drives.
+	$FluidMesh/Mesh.material_override = material
 
 func set_cinematic_frame(frame: float) -> void:
-    var clip_frame := (frame - start_frame) * CLIP_FPS / CINEMATIC_FPS + 1.0
-    visible = clip_frame >= 1.0 and clip_frame <= CLIP_FRAMES
-    if material == null:
-        return
-    material.set_shader_parameter("_autoPlayback", false)
-    material.set_shader_parameter("_displayFrame", clampf(clip_frame, 1.0, CLIP_FRAMES))
-    # Hide the source clip's appearance and cutoff without looping its discontinuity.
-    var fade_in := smoothstep(1.0, 6.0, clip_frame)
-    var fade_out := 1.0 - smoothstep(88.0, CLIP_FRAMES, clip_frame)
-    material.set_shader_parameter("effect_opacity", fade_in * fade_out if visible else 0.0)
+	visible = true
+
+	if material == null:
+		return
+
+	var clip_frame := fposmod(frame - 1.0, CLIP_FRAMES) + 1.0
+
+	material.set_shader_parameter("_autoPlayback", false)
+	material.set_shader_parameter("_displayFrame", clip_frame)
+	material.set_shader_parameter("effect_opacity", 1.0)
