@@ -489,10 +489,10 @@ tracks/15/path = NodePath("01_CAMERAS/005_CameraImpact:position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(21.703516, 23.99622, 24.677483),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(21.703516, 23.99622, 24.325687, 24.677483),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.6988378, 1.241302, -1.4888124), Vector3(-1.6988378, 2.2711139, -1.4888124), Vector3(1.648118, 1.3628259, -3.7799902)]
+"values": [Vector3(-1.6988378, 1.241302, -1.4888124), Vector3(-1.6988378, 2.2711139, -1.4888124), Vector3(-0.08020294, 1.831853, -3.1372874), Vector3(1.648118, 1.3628259, -3.7799902)]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
@@ -501,10 +501,10 @@ tracks/16/path = NodePath("01_CAMERAS/005_CameraImpact:rotation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"times": PackedFloat32Array(21.703516, 23.99622, 24.677483),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(21.703516, 23.99622, 24.325687, 24.677483),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.3364709, -0.21722025, 0), Vector3(-0.336471, 0.48847702, 0)]
+"values": [Vector3(0, 0, 0), Vector3(-0.3364709, -0.21722025, 0), Vector3(-0.33647093, 0.1240649, 0), Vector3(-0.336471, 0.48847702, 0)]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
@@ -575,10 +575,10 @@ tracks/22/path = NodePath("winner:position")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
-"times": PackedFloat32Array(29.583334, 29.708334, 30, 30.166666, 30.333334, 30.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(29.583334, 29.708334, 30, 30.166666, 30.333334, 30.5, 30.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, 0.2, 0)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0), Vector3(0, 0.2, 0), Vector3(0, 0, 0)]
 }
 tracks/23/type = "value"
 tracks/23/imported = false
@@ -649,7 +649,7 @@ tracks/27/keys = {
 "start_offset": 0.0,
 "stream": ExtResource("10_w57ff")
 }],
-"times": PackedFloat32Array(23.7)
+"times": PackedFloat32Array(23.916666)
 }
 tracks/27/use_blend = true
 tracks/28/type = "audio"
@@ -746,6 +746,7 @@ autoplay = false
 [node name="race_cinematic" type="AnimationPlayer" parent="." unique_id=69673402]
 libraries/ = SubResource("AnimationLibrary_f5md3")
 autoplay = &"dragon_race"
+movie_quit_on_finish = true
 
 [node name="01_CAMERAS" type="Node" parent="." unique_id=2127359349]
 
@@ -825,27 +826,27 @@ surface_material_override/0 = SubResource("ShaderMaterial_exjov")
 
 [node name="03_AUDIO" type="Node" parent="." unique_id=272029606]
 
-[node name="Music" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=912948837]
+[node name="Music" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=392694064]
 volume_db = -13.5
 
-[node name="Countdown" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=1534193984]
+[node name="Countdown" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=522530471]
 volume_db = -2.0
 
-[node name="RiverFlow" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=1917461065]
+[node name="RiverFlow" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=599009235]
 volume_db = -9.0
 
-[node name="Crash" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=1039750616]
+[node name="Crash" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=509742272]
 volume_db = -6.5
 
-[node name="Fanfare" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=660654934]
+[node name="Fanfare" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=180031269]
 volume_db = -3.0
 
-[node name="Crowd" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=2074333393]
+[node name="Crowd" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=1913415107]
 volume_db = -6.0
 
-[node name="Splash" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=1539091395]
+[node name="Splash" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=436340957]
 
-[node name="Announcer" type="AudioStreamPlayer3D" parent="03_AUDIO" unique_id=1547520470]
+[node name="Announcer" type="AudioStreamPlayer2D" parent="03_AUDIO" unique_id=879515072]
 volume_db = 2.0
 
 [editable path="environment/env"]

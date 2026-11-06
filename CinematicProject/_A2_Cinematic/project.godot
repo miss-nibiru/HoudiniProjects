@@ -17,8 +17,16 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor]
+
+movie_writer/video_quality=0.9
+movie_writer/movie_file="/Users/dulceherbst-aylesworth/Documents/AAA_Game Development/Houdini/HoudiniProjects/CinematicProject/DragonRace_Final.avi"
+movie_writer/fps=24
 
 [physics]
 
